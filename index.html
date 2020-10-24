@@ -1,0 +1,115 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Shoot The Bird</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet" />
+
+  <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+  <link href="css/font-awesome.css" rel="stylesheet" type="text/css" />
+
+  <link href="css/stylesheet.css" rel="stylesheet" type="text/css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+  <style>
+    .owl-stage {
+      display: -webkit-box;
+      display: -moz-box;
+      display: -ms-box;
+      display: box;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <div class="loading">
+      <p>Loading<br><i class="fa fa-cog" aria-hidden="true"></i></p>
+    </div>
+    <p class="ready">Ready</p>
+    <div class="score">
+      <span class="restart"><i class="fa fa-refresh" aria-hidden="true"></i> Replay</span>
+      <p>Your Score<span id="score-num" class="score-num">0</span></p>
+    </div>
+    <div class="bird first-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird second-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird third-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird four-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird five-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird six-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird seven-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird eight-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird nine-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+    <div class="bird ten-bird">
+      <input type="checkbox">
+      <img src="img/bird.gif" class="fly">
+      <img src="img/die.png" class="die">
+    </div>
+  </div>
+
+  <script src="js/bootstrap.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+
+  <script>
+    $(".owl-carousel-1").owlCarousel({
+      loop: false,
+      margin: 0,
+      nav: false,
+      dots: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        600: {
+          items: 1
+        },
+        1024: {
+          items: 1
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>
