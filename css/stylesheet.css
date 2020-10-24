@@ -1,0 +1,277 @@
+/*Style sheet*/
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700,900&display=swap');
+/*font-family: 'Roboto', sans-serif;*/
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+h1 {
+  margin: 0px;
+}
+h2 {
+  margin: 0px;
+}
+h3 {
+  margin: 0px;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+a:hover {
+  text-decoration: none;
+}
+p {
+  margin-bottom: 0px;
+}
+ul {
+  margin: 0px;
+}
+input {
+  outline: none;
+}
+/*splash page*/
+.wrap{
+  background-image: url(../img/background.png);
+  height: 100vh;
+  width: 100%;
+  background-size: cover;
+  background-position: center 80%;
+  position: relative;
+  cursor: url(../img/cursor.png),pointer !important;
+  overflow: hidden;
+}
+.wrap .bird{
+  position: absolute;
+  width: 130px;
+  cursor: url(../img/cursor-aim.png),pointer !important;
+  left:-130px;
+  transition: all 2s;
+  -webkit-transition: all 2s;
+}
+.wrap .bird img{
+  width: 100%;
+}
+.wrap .bird .die{
+  display: none;
+}
+.wrap .bird input{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0px;
+  top: 0px;
+  opacity: 0;
+  cursor: url(../img/cursor-aim.png),pointer !important;
+}
+.wrap .bird input:checked + .fly{
+  display: none;
+}
+.wrap .bird input:checked + .fly + .die{
+  display: block;
+}
+.wrap .bird-die{
+  animation-play-state: paused;
+  margin-top:1000px;
+}
+/*animation*/
+.first-bird{
+  animation-name: first-bird;
+  animation-timing-function: linear;
+  animation-duration: 4s;
+  animation-delay: 5s;
+}
+@keyframes first-bird {
+  from {left:-130px;top:15%;}
+  to {left:100%; top:5%}
+}
+.second-bird{
+  animation-name: second-bird;
+  animation-delay: 6s;
+  animation-timing-function: linear;
+  animation-duration: 3s;
+}
+@keyframes second-bird {
+  from {left:-130px;top:25%;}
+  to {left:100%; top:30%}
+}
+.third-bird{
+  animation-name: third-bird;
+  animation-delay: 6.4s;
+  animation-timing-function: linear;
+  animation-duration: 5s;
+}
+@keyframes third-bird {
+  from {left:-130px;top:10%;}
+  to {left:100%; top:40%}
+}
+.four-bird{
+  animation-name: four-bird;
+  animation-delay: 7s;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+@keyframes four-bird {
+  from {left:-130px;top:10%;}
+  to {left:100%; top:30%}
+}
+.five-bird{
+  animation-name: five-bird;
+  animation-delay: 7.4s;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+}
+@keyframes five-bird {
+  from {left:-130px;top:30%;}
+  to {left:100%; top:40%}
+}
+.six-bird{
+  animation-name: six-bird;
+  animation-delay: 8s;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+@keyframes six-bird {
+  from {left:-130px;top:40%;}
+  to {left:100%; top:10%}
+}
+.seven-bird{
+  animation-name: seven-bird;
+  animation-delay: 8.5s;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+@keyframes seven-bird {
+  from {left:-130px;top:60%;}
+  to {left:100%; top:50%}
+}
+.eight-bird{
+  animation-name: eight-bird;
+  animation-delay: 9s;
+  animation-duration: 4s;
+  animation-timing-function: linear;
+}
+@keyframes eight-bird {
+  from {left:-130px;top:30%;}
+  to {left:100%; top:40%}
+}
+.nine-bird{
+  animation-name: nine-bird;
+  animation-delay: 9.5s;
+  animation-duration: 6s;
+  animation-timing-function: linear;
+}
+@keyframes nine-bird {
+  from {left:-130px;top:20%;}
+  to {left:100%; top:30%}
+}
+.ten-bird{
+  animation-name: ten-bird;
+  animation-delay: 10s;
+  animation-duration: 3s;
+  animation-timing-function: linear;
+}
+@keyframes ten-bird {
+  from {left:-130px;top:5%;}
+  to {left:100%; top:15%}
+}
+.score{
+  width: 40%;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    display: none;
+    z-index: 3;
+}
+.score.open{
+  display: block;
+}
+.score p{
+  font-size: 35px;
+  padding: 50px 0px;
+}
+.score p span{
+  display: block;
+  font-weight: 600;
+  font-size: 40px;
+}
+.score .restart{
+  position: absolute;
+  left: 15px;
+  top: 12px;
+  font-size: 17px;
+  z-index: 5;
+  cursor: pointer;
+}
+.score .restart i{
+  margin-right: 8px;
+}
+.loading{
+  width: 100%;
+    height: 100vh;
+    background: rgba(255, 255, 255, 1);
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    text-align: center;
+    opacity:0;
+    animation-name: loading;
+    animation-duration: 3s;
+}
+@keyframes loading {
+  0%   {opacity:1;}
+  80%   {opacity:1;}
+  100% {opacity:0;}
+}
+.loading p{
+  font-size: 35px;
+  padding: 50px 0px;
+  margin: auto;
+    position: relative;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.loading p i{
+  position: relative;
+  animation-name: rotate;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+@keyframes rotate {
+  0%   {transform: rotate(0deg);}
+  100% {transform: rotate(90deg);}
+}
+.ready{
+  position: absolute;
+    top: 0px;
+    bottom: 0px;
+    margin: auto;
+    left: 0px;
+    right: 0px;
+    font-size: 55px;
+    font-weight: 500;
+    text-transform: uppercase;
+    text-align: center;
+    height:61px;
+    animation-name: ready;
+    animation-delay: 3s;
+    animation-duration: 2s;
+    opacity:0;
+}
+@keyframes ready {
+  0%   {opacity:1;}
+  80%   {opacity:1;}
+  100% {opacity:0;}
+}
